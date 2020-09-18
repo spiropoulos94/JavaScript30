@@ -9,10 +9,10 @@
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
-    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="100" data-sizing="px">
 
     <label for="blur">Blur:</label>
-    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+    <input id="blur" type="range" name="blur" min="0" max="25" value="12" data-sizing="px">
 
     <label for="base">Base Color</label>
     <input id="base" type="color" name="base" value="#ffc600">
@@ -36,7 +36,7 @@
     }
 
     .controls {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     input {
@@ -45,6 +45,18 @@
   </style>
 
   <script>
+
+    let image = document.querySelector("img")
+    let spacingInput = document.getElementById("spacing")
+    let blurInput = document.getElementById("blur")
+
+    console.log(image, spacingInput.value, blurInput.value)
+
+    spacingInput.addEventListener('input',(e)=>{
+      console.log(e.target.value)
+
+    })
+
   </script>
 
 </body>
