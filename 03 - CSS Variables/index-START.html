@@ -22,17 +22,20 @@
 
   <style>
 
-    /*
-      misc styles, nothing to do with CSS variables
-    */
+    :root {
+      --padding: 10px;
+      --blur: 10px;
+      --set-color : white;
+    }
 
     body {
       text-align: center;
       background: #193549;
-      color: white;
+      color: var(--set-color);
       font-family: 'helvetica neue', sans-serif;
       font-weight: 100;
-      font-size: 50px;
+      font-size: 50px
+
     }
 
     .controls {
@@ -47,6 +50,8 @@
   <script>
 
     let image = document.querySelector("img")
+    image.style.padding = `var(--padding)`
+
     let spacingInput = document.getElementById("spacing")
     let blurInput = document.getElementById("blur")
 
@@ -54,6 +59,7 @@
 
     spacingInput.addEventListener('input',(e)=>{
       console.log(e.target.value)
+
 
     })
 
