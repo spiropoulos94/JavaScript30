@@ -48,6 +48,7 @@
   </style>
 
   <script>
+    let root = document.documentElement;
 
     let image = document.querySelector("img")
     image.style.padding = `var(--padding)`
@@ -59,6 +60,7 @@
 
     spacingInput.addEventListener('input',(e)=>{
       console.log(e.target.value)
+      root.style.setProperty('--padding', e.target.value + "px");
 
 
     })
