@@ -49,14 +49,9 @@
 
 <script>
     let root = document.documentElement;
-
     let image = document.querySelector("img")
-
-
     image.style.padding = `var(--padding)`
-
     image.style.background = `var(--set-color)`
-
     image.style.filter = 'var(--blur)'
 
     let spacingInput = document.getElementById("spacing")
@@ -69,11 +64,12 @@
     blurInput.addEventListener("input", (e) => {
         root.style.setProperty("--blur", `blur(${e.target.value}px)`)
     })
-    //test commit
     let colorInput = document.getElementById("base")
     colorInput.addEventListener('input', e => {
         root.style.setProperty("--set-color", `${e.target.value}`)
     })
+
+
 
 </script>
 
